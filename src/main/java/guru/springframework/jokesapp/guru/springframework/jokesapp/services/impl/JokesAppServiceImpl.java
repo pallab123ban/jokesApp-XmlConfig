@@ -2,7 +2,6 @@ package guru.springframework.jokesapp.guru.springframework.jokesapp.services.imp
 
 import guru.springframework.jokesapp.guru.springframework.jokesapp.services.JokesAppService;
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,9 +12,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class JokesAppServiceImpl implements JokesAppService {
 
+    /* This is created as final to avoid object creation everytime inside the getRandomJokes method */
+    private final ChuckNorrisQuotes chuckNorrisQuotes;
+
+    public JokesAppServiceImpl() {
+        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    }
+
+
     @Override
-    public String getRandomJokes() {
-        ChuckNorrisQuotes chuckNorrisQuotes = new ChuckNorrisQuotes();
+    public String getRandomJokes(){
         return chuckNorrisQuotes.getRandomQuote();
     }
 }
