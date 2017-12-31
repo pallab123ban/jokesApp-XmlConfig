@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.Map;
 
 /**
- * This is the
+ * This is the controller class
  * @author PALLAB
  */
 @Controller
