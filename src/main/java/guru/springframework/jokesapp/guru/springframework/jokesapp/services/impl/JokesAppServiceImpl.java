@@ -15,8 +15,8 @@ public class JokesAppServiceImpl implements JokesAppService {
     /* This is now created using Spring Java configuration */
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public JokesAppServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
-        this.chuckNorrisQuotes = chuckNorrisQuotes;
+    public JokesAppServiceImpl() {
+        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
     }
 
 
