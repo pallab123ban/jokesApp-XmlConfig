@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.Map;
-
 /**
  * This is the controller class
+ *
  * @author PALLAB
  */
 @Controller
@@ -25,7 +24,7 @@ public class JokesAppController {
         this.jokesAppService = jokesAppService;
     }
 
-    @RequestMapping(value="/get/joke", method = RequestMethod.GET)
+    @RequestMapping(value = "/get/joke", method = RequestMethod.GET)
     public String getRandomQuotes(Model model) {
         model.addAttribute("message", jokesAppService.getRandomJokes());
         return "chucknorris";
