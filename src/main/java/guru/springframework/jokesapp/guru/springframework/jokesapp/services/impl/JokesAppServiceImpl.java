@@ -12,13 +12,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class JokesAppServiceImpl implements JokesAppService {
 
+
+
     /* This is now created using Spring Java configuration */
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public JokesAppServiceImpl() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
-    }
 
+
+    public JokesAppServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
+    }
 
 
 
